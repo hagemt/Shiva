@@ -10,11 +10,13 @@ public enum PokerSuit implements Suit<PokerSuit> {
 		symbol = c;
 	}
 
-	@Override public char getSymbol() {
+	@Override
+	public char getSymbol() {
 		return symbol;
 	}
 
-	@Override public String toString() {
+	@Override
+	public String toString() {
 		return name().toLowerCase();
 	}
 }

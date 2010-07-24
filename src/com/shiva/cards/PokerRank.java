@@ -13,42 +13,45 @@ public enum PokerRank implements Rank<PokerRank> {
 		return equals(ACE);
 	}
 	
-	private boolean isOdd() {
-		return equals(JOKER) || equals(ACE);
-	}
-	
 	public boolean beats(PokerRank r, boolean acesHigh) {
+		if (equals(r) || r.isJoker()) { return false; }
 		switch (this) {
-			case JOKER : return !r.isJoker();
-			case ACE : return !r.isOdd();
-			default : return ordinal() > r.ordinal();
+			case JOKER : return true;
+			case ACE : return acesHigh && !r.isJoker();
+			default : return (r.isAce()) ? !acesHigh : ordinal() > r.ordinal();
 		}
 	}
 
-	@Override public boolean beats(PokerRank r) {
+	@Override
+	public boolean beats(PokerRank r) {
 		return beats(r, true);
 	}
 
-	@Override public boolean isStandard() {
+	@Override
+	public boolean isStandard() {
 		return !equals(JOKER);
 	}
 
-	@Override public char getSymbol() {
+	@Override
+	public char getSymbol() {
 		switch (this) {
 			case JOKER : return '$';
 			case ACE : return 'A';
 			case JACK : return 'J';
 			case QUEEN : return 'Q';
 			case KING : return 'K';
+			case TEN : return 'T';
 			default : return (char)('0' + ordinal());
 		}
 	}
 
-	@Override public int getValue() {
+	@Override
+	public int getValue() {
 		return ordinal();
 	}
 	
-	@Override public String toString() {
+	@Override
+	public String toString() {
 		return name().toLowerCase();
 	}
 }

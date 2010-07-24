@@ -13,7 +13,8 @@ public class PokerDeck extends Deck<PokerCard> {
 		}
 	}
 
-	@Override public boolean pullCard(PokerCard c) {
+	@Override
+	public boolean pullCard(PokerCard c) {
 		return remove(c);
 	}
 }
