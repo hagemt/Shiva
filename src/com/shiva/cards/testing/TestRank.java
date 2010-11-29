@@ -4,10 +4,15 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 import com.shiva.cards.PokerRank;
 
+/**
+ * Test cases for non-trivial methods in the PokerRank class.
+ * @author Tor E Hagemann <hagemt@rpi.edu>
+ * @see com.shiva.cards.PokerRank.beats(com.shiva.cards.PokerRank)
+ */
 public class TestRank {
-
 	@Test
 	public void testBeatsPokerRankBoolean() {
+		// Try all PokerRanks against their corner cases
 		for (PokerRank r : PokerRank.values()) {
 			assertFalse(r.beats(r));
 			assertFalse(r.beats(PokerRank.JOKER));
@@ -16,11 +21,16 @@ public class TestRank {
 				assertFalse(PokerRank.ACE.beats(r, false));
 			}
 		}
-		int values = PokerRank.values().length - 1;
+		// Try a large number of random bounded comparisons
+		PokerRank[] ranks = PokerRank.values();
+		int values = ranks.length - 1;
 		for (int i = 0; i < 1000000; ++i) {
+			// Index in the interval [1, ranks.length)
 			int a = (int)(Math.random() * values) + 1;
+			// Index in the interval [a, ranks.length)
 			int b = (int)(Math.random() * (values - a)) + a;
-			assertFalse(PokerRank.values()[a].beats(PokerRank.values()[b], false));
+			// We require higher ranks to beat lower ones
+			assertFalse(ranks[a].beats(ranks[b], false));
 		}
 	}
 }
