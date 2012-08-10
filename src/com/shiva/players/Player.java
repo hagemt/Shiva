@@ -7,14 +7,24 @@ import com.shiva.cards.PokerCard;
 public class Player implements Comparable<Player> {
 	private final String name;
 	private List<PokerCard> hand;
+	private Score score;
 	
 	public Player(String s) {
 		name = s;
 		hand = new LinkedList<PokerCard>();
+		score = new Score();
 	}
 	
 	public String getName() {
 		return name;
+	}
+	
+	public Score getScore() {
+		return score;
+	}
+	
+	public boolean isHolding(PokerCard c) {
+		return hand.contains(c);
 	}
 	
 	public boolean take(PokerCard c) {

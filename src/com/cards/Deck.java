@@ -18,7 +18,7 @@ import java.util.Random;
  * @param <C> an subclass of Card, with its own Suit and Rank type
  * @see java.util.Collection
  */
-public abstract class Deck<C extends Card<? extends Suit<?>, ? extends Rank<?>>> implements Iterable<C> {
+public abstract class Deck<C extends Card<? extends Rank<?>, ? extends Suit<?>>> implements Iterable<C> {
 	/**
 	 * The underlying list of cards of the given type.
 	 */

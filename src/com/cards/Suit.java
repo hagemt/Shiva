@@ -7,8 +7,8 @@ package com.cards;
  * Suit is with an enumerated type.
  * @author Tor E Hagemann <hagemt@rpi.edu>
  * @param <S> an explicit Suit type that may match this one
- * @see com.card.Card
- * @see com.card.Rank
+ * @see com.cards.Card
+ * @see com.cards.Rank
  */
 public interface Suit<S extends Suit<S>> extends Comparable<S> {
 	/**

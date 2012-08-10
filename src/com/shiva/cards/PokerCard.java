@@ -7,7 +7,7 @@ import com.cards.Card;
  * @author Tor E Hagemann <hagemt@rpi.edu>
  * @see com.cards.Card
  */
-public class PokerCard extends Card<PokerSuit, PokerRank> {
+public class PokerCard extends Card<PokerRank, PokerSuit> {
 	/**
 	 * Constructs a new PokerCard with the given suit and rank.
 	 * Note that according to the supertype's implementation,
@@ -15,7 +15,7 @@ public class PokerCard extends Card<PokerSuit, PokerRank> {
 	 * @param s a member of the PokerSuit enumeration, or <code>null</code>
 	 * @param r a member of the PokerRank enumeration
 	 */
-	public PokerCard(PokerSuit s, PokerRank r) {
+	public PokerCard(PokerRank r, PokerSuit s) {
 		super(s, r);
 	}
 

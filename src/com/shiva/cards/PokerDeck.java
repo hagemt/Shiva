@@ -7,13 +7,13 @@ public class PokerDeck extends Deck<PokerCard> {
 	/**
 	 * Constructs a standard 52-card deck with no jokers, left in order.
 	 * More specifically, adds one of each rank from each suit specified by PokerCard.
-	 * @see com.shiva.PokerCard
+	 * @see com.shiva.cards.PokerCard
 	 */
 	public PokerDeck() {
 		for (PokerSuit suit : PokerSuit.values()) {
 			for (PokerRank rank : PokerRank.values()) {
 				if (rank.isStandard()) {
-					cards.add(new PokerCard(suit, rank));
+					cards.add(new PokerCard(rank, suit));
 				}
 			}
 		}

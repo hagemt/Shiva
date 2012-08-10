@@ -7,7 +7,7 @@ import com.shiva.cards.PokerRank;
 /**
  * Test cases for non-trivial methods in the PokerRank class.
  * @author Tor E Hagemann <hagemt@rpi.edu>
- * @see com.shiva.cards.PokerRank.beats(com.shiva.cards.PokerRank)
+ * @see com.shiva.cards.PokerRank#beats(com.shiva.cards.PokerRank)
  */
 public class TestRank {
 	@Test

@@ -12,7 +12,7 @@ package com.cards;
  * @see com.cards.Suit
  * @see com.cards.Rank
  */
-public abstract class Card<S extends Suit<S>, R extends Rank<R>> {
+public abstract class Card<R extends Rank<R>, S extends Suit<S>> {
 	/**
 	 * The playing card's suit.
 	 */

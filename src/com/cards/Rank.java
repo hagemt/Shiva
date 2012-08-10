@@ -41,7 +41,7 @@ public interface Rank<R extends Rank<R>> extends Comparable<R> {
 	 * This relationship is not necessarily transitive, though it should be symmetric.
 	 * In general, for a given Rank <code>r</code>, <code>r.beats(r) == false</code>.
 	 * @param r another Rank to pit this one against
-	 * @return 
+	 * @return <code>true</code> if this Rank defeats the given one, <code>false</code> otherwise
 	 */
 	public boolean beats(R r);
 }

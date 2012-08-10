@@ -77,7 +77,9 @@ public class SevenHandPokerGame extends JFrame implements SevenHandPokerConstant
 		}
 		SwingUtilities.invokeLater(new Runnable() {
 			@Override
-			public void run() { new SevenHandPokerGame().setVisible(true); }
+			public void run() {
+				new SevenHandPokerGame().setVisible(true);
+			}
 		});
 	}
 }
