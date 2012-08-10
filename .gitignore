@@ -5,6 +5,3 @@
 *.jar
 *.war
 *.ear
-
-# Javadoc #
-doc/*
