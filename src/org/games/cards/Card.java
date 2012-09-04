@@ -1,4 +1,4 @@
-package com.cards;
+package org.games.cards;
 
 /**
  * Encapsulates the notion of a playing card, extendible to multiple implementations.
@@ -9,8 +9,8 @@ package com.cards;
  * @author Tor E Hagemann <hagemt@rpi.edu>
  * @param <S> an implementation of the Suit interface
  * @param <R> an implementation of the Rank interface
- * @see com.cards.Suit
- * @see com.cards.Rank
+ * @see org.games.cards.Suit
+ * @see org.games.cards.Rank
  */
 public abstract class Card<R extends Rank<R>, S extends Suit<S>> {
 	/**
@@ -39,7 +39,7 @@ public abstract class Card<R extends Rank<R>, S extends Suit<S>> {
 	 * @param r the given Rank
 	 * @throws IllegalArgumentException if <code>r</code> is <code>null</code>
 	 */
-	protected Card(S s, R r) {
+	protected Card(R r, S s) {
 		if (r == null) {
 			throw new IllegalArgumentException("rank cannot be null");
 		}

@@ -1,4 +1,4 @@
-package com.cards;
+package org.games.cards;
 
 /**
  * Encapsulates the notion of a playing card's non-suit characteristic.
@@ -6,8 +6,8 @@ package com.cards;
  * of its suit. The easiest way to implement Rank is with an enumerated type.
  * @author Tor E Hagemann <hagemt@rpi.edu>
  * @param <R> an explicit Rank type that this Rank opposes
- * @see com.cards.Card
- * @see com.cards.Suit
+ * @see org.games.cards.Card
+ * @see org.games.cards.Suit
  */
 public interface Rank<R extends Rank<R>> extends Comparable<R> {
 	/**

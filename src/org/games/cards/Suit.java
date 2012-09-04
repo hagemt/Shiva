@@ -1,4 +1,4 @@
-package com.cards;
+package org.games.cards;
 
 /**
  * Encapsulates the notion of a group of playing cards, or that of
@@ -7,8 +7,8 @@ package com.cards;
  * Suit is with an enumerated type.
  * @author Tor E Hagemann <hagemt@rpi.edu>
  * @param <S> an explicit Suit type that may match this one
- * @see com.cards.Card
- * @see com.cards.Rank
+ * @see org.games.cards.Card
+ * @see org.games.cards.Rank
  */
 public interface Suit<S extends Suit<S>> extends Comparable<S> {
 	/**

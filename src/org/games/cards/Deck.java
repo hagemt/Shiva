@@ -1,4 +1,4 @@
-package com.cards;
+package org.games.cards;
 
 import java.util.Collections;
 import java.util.Iterator;
