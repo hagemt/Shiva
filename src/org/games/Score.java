@@ -1,13 +1,5 @@
-package com.shiva.players;
+package org.games;
 
-public class Score {
-	public int wins, losses, ties;
-	
-	public Score() {
-		wins = losses = ties = 0;
-	}
-
-	public String toString() {
-		return wins + "/" + losses + "/" + ties;
-	}
+public interface Score extends Comparable<Score> {
+	// TODO proper normalization
 }

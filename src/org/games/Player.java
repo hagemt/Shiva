@@ -1,42 +1,23 @@
-package com.shiva.players;
+package org.games;
 
-import java.util.LinkedList;
-import java.util.List;
-import com.shiva.cards.PokerCard;
-
-public class Player implements Comparable<Player> {
-	private final String name;
-	private List<PokerCard> hand;
-	private Score score;
+public abstract class Player implements Comparable<Player> {
+	protected final String name;
+	protected Score score;
 	
-	public Player(String s) {
-		name = s;
-		hand = new LinkedList<PokerCard>();
-		score = new Score();
+	protected Player(String name) {
+		this.name = name;
 	}
 	
 	public String getName() {
 		return name;
 	}
 	
-	public Score getScore() {
-		return score;
+	public String score() {
+		return score.toString();
 	}
 	
-	public boolean isHolding(PokerCard c) {
-		return hand.contains(c);
-	}
-	
-	public boolean take(PokerCard c) {
-		return hand.add(c);
-	}
-	
-	public boolean play(PokerCard c) {
-		return hand.remove(c);
-	}
-
-	@Override
 	public int compareTo(Player p) {
-		return name.compareTo(p.name);
+		int diff = score.compareTo(p.score);
+		return (diff == 0) ? name.compareTo(p.name) : diff;
 	}
 }
