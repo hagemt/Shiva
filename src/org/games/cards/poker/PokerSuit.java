@@ -1,9 +1,10 @@
-package com.shiva.cards;
+package org.games.cards.poker;
 
-import com.cards.Suit;
+import org.games.cards.Suit;
 
 public enum PokerSuit implements Suit<PokerSuit> {
 	SPADES('\u2660'), CLUBS('\u2663'), HEARTS('\u2665'), DIAMONDS('\u2666');
+
 	private char symbol;
 
 	private PokerSuit(char c) {

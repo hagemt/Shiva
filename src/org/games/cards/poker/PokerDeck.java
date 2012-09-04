@@ -1,13 +1,14 @@
-package com.shiva.cards;
+package org.games.cards.poker;
 
 import java.util.Random;
-import com.cards.Deck;
+
+import org.games.cards.Deck;
 
 public class PokerDeck extends Deck<PokerCard> {
 	/**
 	 * Constructs a standard 52-card deck with no jokers, left in order.
 	 * More specifically, adds one of each rank from each suit specified by PokerCard.
-	 * @see com.shiva.cards.PokerCard
+	 * @see org.games.cards.poker.PokerCard
 	 */
 	public PokerDeck() {
 		for (PokerSuit suit : PokerSuit.values()) {

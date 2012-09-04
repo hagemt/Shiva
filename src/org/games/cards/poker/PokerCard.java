@@ -1,11 +1,10 @@
-package com.shiva.cards;
+package org.games.cards.poker;
 
-import com.cards.Card;
+import org.games.cards.Card;
 
 /**
- * 
  * @author Tor E Hagemann <hagemt@rpi.edu>
- * @see com.cards.Card
+ * @see org.games.cards.Card
  */
 public class PokerCard extends Card<PokerRank, PokerSuit> {
 	/**
@@ -16,7 +15,7 @@ public class PokerCard extends Card<PokerRank, PokerSuit> {
 	 * @param r a member of the PokerRank enumeration
 	 */
 	public PokerCard(PokerRank r, PokerSuit s) {
-		super(s, r);
+		super(r, s);
 	}
 
 	/**
@@ -25,6 +24,6 @@ public class PokerCard extends Card<PokerRank, PokerSuit> {
 	 * @return a String containing this PokerCard's representation
 	 */
 	public String toString() {
-		return (rank.isJoker()) ? "Joker" : rank + " of " + suit;
+		return (rank == PokerRank.JOKER) ? "Joker" : rank + " of " + suit;
 	}
 }
