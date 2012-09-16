@@ -10,3 +10,7 @@ We use a highly-modular development scheme, where functionality is encapsulated 
 This allows us to genericize the use of card-game classes in order to maximize code re-use.
 
 We also aim to use javadoc and JUnit, targeting Java 6 and higher.
+
+All images are from OCAL. [1] We use vector graphics wherever possible.
+
+[1]: http://www.openclipart.org/
