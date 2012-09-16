@@ -5,3 +5,11 @@
 *.jar
 *.war
 *.ear
+
+# Javadoc #
+doc/index-files/*
+doc/org/*
+doc/resources/*
+doc/package-list
+doc/*.html
+doc/*.css
